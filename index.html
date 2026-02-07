@@ -1,0 +1,109 @@
+<!doctype html>
+<!--
+  Images loaded from photos.json (assets/images/couples/, assets/images/kids/).
+  Sticker: assets/images/sticker.png (optional).
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Will you be my Valentine? 💜</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="single-viewport">
+    <div class="hearts-bg" aria-hidden="true"></div>
+
+    <div class="page-layout">
+      <section class="collage-wrap collage-top" aria-label="Our photos">
+        <div class="film-sprocket film-sprocket-top" aria-hidden="true"></div>
+        <div class="collage-track" id="collage-track-top"></div>
+        <div class="film-sprocket film-sprocket-bottom" aria-hidden="true"></div>
+      </section>
+
+      <main class="card-wrap">
+        <article class="valentine-card" id="valentine-card">
+        <div class="card-sticker">
+          <img src="assets/images/sticker.png" alt="" class="sticker-img" />
+          <span class="sticker-fallback" aria-hidden="true" hidden>💜</span>
+        </div>
+        <h1 class="card-headline">Hey bae, will you be my Valentine?</h1>
+        <p class="card-subtext" id="card-subtext">Choose wisely 😼</p>
+        <div class="card-buttons" id="card-buttons">
+          <button type="button" class="btn btn-yes" id="btn-yes">Yes</button>
+          <button type="button" class="btn btn-no" id="btn-no">No</button>
+        </div>
+        </article>
+
+        <section class="reward-section" id="reward-section" hidden>
+          <p class="love-translation-headline" id="love-translation-headline">I love you</p>
+          <div class="reward-stage-wrap">
+            <div class="photo-strip photo-strip-left" id="photo-strip-left"></div>
+            <section id="loveStage" class="love-stage">
+              <div class="stage">
+                <div class="stage-row">
+                  <div class="stage-left">
+                    <p class="stage-title">My love for you began…</p>
+                    <p id="loveTimer" class="stage-timer">—</p>
+                  </div>
+                  <div class="stage-right">
+                    <div class="tree-wrap">
+                      <div class="tree-ground"></div>
+                      <div id="treeTrunk" class="tree-trunk"></div>
+                      <div id="treeCanopy" class="tree-canopy"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reward-gif-wrap" aria-hidden="true">
+                  <div class="tenor-gif-embed" data-postid="23651667" data-share-method="host" data-aspect-ratio="0.940625" data-width="100%"><a href="https://tenor.com/view/sleep-cat-two-cat-cat-cat-love-gif-23651667">Sleep Cat Two Cat GIF</a></div>
+                </div>
+              </div>
+            </section>
+            <div class="photo-strip photo-strip-right" id="photo-strip-right"></div>
+          </div>
+        </section>
+      </main>
+
+      <section class="collage-wrap collage-bottom" aria-label="Our photos">
+        <div class="film-sprocket film-sprocket-top" aria-hidden="true"></div>
+        <div class="collage-track collage-track-reverse" id="collage-track-bottom"></div>
+        <div class="film-sprocket film-sprocket-bottom" aria-hidden="true"></div>
+      </section>
+    </div>
+
+    <div class="celebration-overlay" id="celebration-overlay" hidden aria-modal="true" role="dialog" aria-label="Celebration">
+      <div class="overlay-inner">
+        <p class="overlay-message">YAYYYYY 💜 I love you</p>
+        <button type="button" class="btn btn-continue" id="btn-continue">Continue</button>
+      </div>
+    </div>
+
+    <div class="verify-modal" id="verify-modal" hidden aria-modal="true" role="dialog" aria-label="Verify">
+      <div class="verify-card" id="verify-card">
+        <h2 class="verify-title">Wait… let's make sure it's really Karolina 💜</h2>
+        <p class="verify-subtitle">Enter the day we first started dating</p>
+        <div class="calendar-widget">
+          <div class="calendar-header">
+            <button type="button" class="calendar-prev" id="calendar-prev" aria-label="Previous month">‹</button>
+            <span class="calendar-month-year" id="calendar-month-year"></span>
+            <button type="button" class="calendar-next" id="calendar-next" aria-label="Next month">›</button>
+          </div>
+          <div class="calendar-year-select-wrap">
+            <label for="calendar-year">Year</label>
+            <select id="calendar-year" class="calendar-year-select"></select>
+          </div>
+          <div class="calendar-days" id="calendar-days"></div>
+        </div>
+        <p class="verify-error" id="verify-error"></p>
+        <button type="button" class="btn btn-submit" id="verify-submit">Submit</button>
+      </div>
+    </div>
+
+    <div class="confetti-container" id="confetti-container" aria-hidden="true"></div>
+
+    <script src="script.js"></script>
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  </body>
+</html>

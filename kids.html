@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Us as Kids 💜</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page-kids">
+    <div class="hearts-bg" aria-hidden="true"></div>
+
+    <main class="card-wrap">
+      <h1 class="kids-heading">Us as Kids</h1>
+      <div class="kids-grid kids-grid-simple" id="kids-grid"></div>
+    </main>
+
+    <div class="lightbox" id="lightbox" hidden aria-modal="true" role="dialog" aria-label="Photo view">
+      <div class="lightbox-content">
+        <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+        <img src="" alt="Enlarged view" id="lightbox-img" />
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        "use strict";
+        var params = new URLSearchParams(window.location.search);
+        if (params.get("from") !== "yes") {
+          window.location.replace("index.html");
+          return;
+        }
+      })();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
